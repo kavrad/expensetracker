@@ -37,8 +37,7 @@ server.use(
 server.use(compression())
 server.use(morgan('combined',{stream:accessLogStream}))
 
-const privateKey=fs.readFileSync('server.key')
-const certificate=fs.readFileSync('server.cert')
+
 
 const signUpRoutes=require('./routes/signUp');
 server.use(signUpRoutes);
